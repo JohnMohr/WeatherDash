@@ -6,6 +6,7 @@ h1 {
 
 header {
     background-color:burlywood;
+    border: 2px solid black;
     text-align:center;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -14,7 +15,7 @@ header {
 
 body {
     background-color:cadetblue;
-
+    
 }
 
 .weatherCard {
