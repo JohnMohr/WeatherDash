@@ -39,7 +39,31 @@ function getIndex(citySearch) {
 
         var queryIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + cityLat + "&lon=" + cityLon;
 
+        $.ajax({
+            url: queryIndex,
+            method: "GET"
+        }).then(function (response) {
 
+            $('.UV').html(`${response.value}`);
+
+            if (response.value <= 2) {
+                $('.UV').css('background-color', '#8DC443');
+                $('.UV').css('color', 'white');
+            } else if (response.value > 2 && response.value <= 5) {
+                $('.UV').css('background-color', '#FDD835');
+                $('.UV').css('color', 'white');
+            } else if (response.value > 5 && response.value <= 7) {
+                $('.UV').css('background-color', '#FFB301');
+                $('.UV').css('color', 'white');
+            } else if (response.value > 7 && response.value <= 10) {
+                $('.UV').css('background-color', '#D1394A');
+                $('.UV').css('color', 'white');
+            } else if (response.value > 10) {
+                $('.UV').css('background-color', '#954F71');
+                $('.UV').css('color', 'white');
+            }
+        
+        })
     })
 
 }
