@@ -1,0 +1,23 @@
+h1 {
+    color:aquamarine;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+header {
+    background-color:burlywood;
+    text-align:center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color:cadetblue;
+
+}
+
+.weatherCard {
+    background-color:burlywood;
+    
+}
