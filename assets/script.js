@@ -65,7 +65,7 @@ function getIndex(citySearch) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        
+
         const cityLon = response.coord.lon;
         const cityLat = response.coord.lat;
 
@@ -94,19 +94,17 @@ function getIndex(citySearch) {
                 $('.UV').css('background-color', '#954F71');
                 $('.UV').css('color', 'white');
             }
-        
+
         })
     })
 
 }
 
 
-
-
 // if there's no cities in local storage than load new-default cityList
 // else grab the local storage cities and do work on them
 if (localStorage.getItem('Cities') === null) {
-    
+
     // new-default cityList
     cityList = ["Atlanta", "Chicago", "Austin", "New York", "San Francisco", "Portland", "Seattle"]
     //stringify them cities
@@ -132,10 +130,10 @@ if (localStorage.getItem('Cities') === null) {
             <li class="searchItem">${element}</li>
         `)
     });
-        // THE SKY
-        currentWeather(cityList[0]);
-        getIndex(cityList[0]);
-        getForecast(cityList[0]);
+    // THE SKY
+    currentWeather(cityList[0]);
+    getIndex(cityList[0]);
+    getForecast(cityList[0]);
 }
 // when .searchitem is clicked execute this event function
 $('.searchItem').on('click', function (event) {
@@ -156,8 +154,8 @@ function addHistory() {
         <li class="searchItem">${searchedCity}</li>
     `);
 
-        cityList.unshift(searchedCity);
+    cityList.unshift(searchedCity);
 
-        localStorage.setItem('Cities', JSON.stringify(cityList));
+    localStorage.setItem('Cities', JSON.stringify(cityList));
 };
 
