@@ -65,11 +65,11 @@ function getIndex(citySearch) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-
+        
         const cityLon = response.coord.lon;
         const cityLat = response.coord.lat;
 
-        var queryIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + cityLat + "&lon=" + cityLon;
+        var queryIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKEY + "&lat=" + cityLat + "&lon=" + cityLon;
 
         $.ajax({
             url: queryIndex,
