@@ -69,6 +69,38 @@ function getIndex(citySearch) {
 }
 
 //search function
+const cityList = [];
+
+
+if (localStorage.getItem('Cities') === null) {
+
+    cityList = ["Atlanta", "Chicago", "Austin", "New York", "San Francisco", "Portland", "Seattle"]
+
+    localStorage.setItem('Cities', JSON.stringify(cityList));
+
+    cityList.forEach(element => {
+        $(`$searchHistory`).append(`
+        <li class="searchItem">${element}</li>
+        `);
+    });
+
+    currentWeather(cityList[0]);
+    getIndex(cityList[0]);
+    getForecast(cityList[0])
+
+} else {
+
+    cityList = JSON.parse(localStorage.getItem('Cities'));
+
+    cityList.forEach(element => {
+
+        $('#searchHistory').append(`
+        
+        `)
+
+    })
+}
+
 const searchedCity;
 
 $(document).ready(function () {
