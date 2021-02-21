@@ -5,7 +5,7 @@ const cityList = [];
 
 
 
-
+ info
 //main page forecast information
 $("#currentDate").text("Today " + moment().format('ddd Do'));
 
@@ -17,9 +17,10 @@ for (let i = 0; i < 5; i++) {
     forecastCard.html(`<h4> ${moment().add(startForecast, 'days').format('ddd')} </h4>`)
 };
 
+    const searchedCity; 
+
 // (bad code, bad code, Wat you gon' do) Wat you gon' do when city search is submitted (foo'?)
 $(document).ready(function () {
-    const searchedCity;
 
     $(`#city-search`).submit(function () {
         event.preventDefault();
@@ -54,7 +55,7 @@ function currentWeather(citySearch) {
         $(".wind").html(`${wind} `);
         $(".wind").append(`<span class"units">MPH</span>`);
 
-        $("#currentInfo").text(response.weather[0].description)
+        $("#currentDescription").text(response.weather[0].description)
 
     })
 }
@@ -122,7 +123,7 @@ function getForecast(citySearch) {
             forecastCard.html(`
                 <h4>${forecastDay}</h4>
                 <p class="forecastNumber">${forecastTemp} <span class="units">&#176;F</span></p>
-                <p class="weatherInfo">${forecastInfo}</p>
+                <p class="weatherDescription">${forecastInfo}</p>
                 <p class="forecastHumid">${forecastHumid} <span class="units">%</span></p>
 
             `)
@@ -168,7 +169,10 @@ if (localStorage.getItem('Cities') === null) {
     getForecast(cityList[0]);
 }
 // when .searchitem is clicked execute this event function
-$('.searchItem').on('click', function (event) {
+$('#city-search').on('click', function (event) {
+    event.preventDefault();
+
+
     // the target of the innextText is now itemText
     const itemText = event.target.innerText;
     //ItemText is used as the value to execute

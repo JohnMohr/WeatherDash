@@ -25,9 +25,9 @@
         <div class="row viewCrate">
             <!-- search -->
             <div class="col-3 viewContainer searchContainer">
-                <form action="submit" id="city-search">
+                <form action="submit-control" id="city-search">
                     <label for=""> Search For a City:</label>
-                    <input type="text" id="city-text" aria-label="search">
+                    <input type="text" id="city-text" aria-label="Search">
                 </form>
                 <div id="searchHistory"></div>
             </div>
@@ -38,7 +38,7 @@
                     <div class="row d-flex align-items-center">
                         <h2 class="city">Today's Weather:</h2>
                         <span id="currentDate"></span>
-                        <span id="currentInfo" class="weatherInfo"></span>
+                        <span id="currentDescription" class="weatherDescription"></span>
                     </div>
                     <div class="row justify-content-between">
                         <div class="col weatherCard">
@@ -64,19 +64,17 @@
                     <div class="row">
                         <div class="col weatherCard" data-card="0">
                             <h4 class="forecastDate"></h4>
-                            <p class="temp displayNumber"></p>
+                            
                         </div>
                         <div class="col weatherCard" data-card="1">
                             <h4 class="forecastDate"></h4>
-                            <p class="humidity displayNumber"></p>
                         </div>
                         <div class="col weatherCard" data-card="2">
                             <h4 class="forecastDate"></h4>
-                            <p class="wind displayNumber"></p>
                         </div>
                         <div class="col weatherCard" data-card="3">
                             <h4 class="forecastDate"></h4>
-                            <p class="UV displayNumber"></p>
+                            
                         </div>
                     </div>
                 </div>
