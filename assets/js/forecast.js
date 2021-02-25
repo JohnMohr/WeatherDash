@@ -1,5 +1,5 @@
 function getForecast(citySearch) {
-    const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=" + APIKEY + "&q=" + citySearch + "&units=imperial";
+    const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=" + APIKEY + "&q=" + citySearch;
 
     $.ajax({
         url: forecastURL,
