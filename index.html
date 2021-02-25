@@ -25,13 +25,13 @@
     <div class="container displayContainer overallCard">
         <div class="row viewCrate">
             <!-- search -->
-            <div class="col-sm-3 displayContainer searchCityContainer order-12 order-sm-1">
+            <aside class="col-sm-3 displayContainer order-12 order-sm-1">
                 <form action="submit" id="city-search">
-                    <label for=""> Search For a City:</label>
+                    <strong><label for=""> Search For a City:</label></strong>
                     <input type="text" id="city-text" aria-label="Search">
                 </form>
                 <div id="searchHistory"></div>
-            </div>
+            </aside>
             <!-- content -->
             <div class="col-sm-9 order-1 order-sm-12">
 
@@ -61,9 +61,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="container displayContainer">
+                <div class="container displayContainer mainContainer">
                     <h2>5-day Forecast</h2>
-                    <div class="row">
+                    <div class="row d-flex justify-content-between">
                         <div class="col displayCard" data-card="0">
                             <h4 class="forecastDate"></h4>
                             

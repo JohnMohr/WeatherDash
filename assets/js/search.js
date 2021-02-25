@@ -35,9 +35,8 @@ if (localStorage.getItem('Cities') === null) {
     getForecast(cityList[0]);
 }
 // when .searchitem is clicked execute this event function
-$('#city-search').on('click', function (event) {
+$('.searchItem').on('click', function (event) {
     event.preventDefault();
-
 
     // the target of the innextText is now itemText
     const itemText = event.target.innerText;
