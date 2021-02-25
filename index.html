@@ -21,58 +21,59 @@
         </div>
     </header>
 
-    <div class="container viewContainer">
+    <div class="container displayContainer overallCard">
         <div class="row viewCrate">
             <!-- search -->
-            <div class="col-3 viewContainer searchContainer">
-                <form action="submit-control" id="city-search">
+            <div class="col-sm-3 displayContainer order-12 order-sm-1">
+                <form action="submit" id="city-search">
                     <label for=""> Search For a City:</label>
                     <input type="text" id="city-text" aria-label="Search">
                 </form>
                 <div id="searchHistory"></div>
             </div>
             <!-- content -->
-            <div class="col-9">
+            <div class="col-sm-9 order-1 order-sm-12">
 
-                <div class="container viewContainer">
-                    <div class="row d-flex align-items-center">
+                <div class="container displayContainer mainContainer">
+                    <div class="row align-items-center">
                         <h2 class="city">Today's Weather:</h2>
                         <span id="currentDate"></span>
                         <span id="currentDescription" class="weatherDescription"></span>
+                        <img id="currentIcon">
                     </div>
                     <div class="row justify-content-between">
-                        <div class="col weatherCard">
+                        <div class="col displayCard">
                             <h4>Temperature</h4>
                             <p class="temp displayNumber"></p>
                         </div>
-                        <div class="col weatherCard">
+                        <div class="col displayCard">
                             <h4>Humidity</h4>
                             <p class="humidity displayNumber"></p>
                         </div>
-                        <div class="col weatherCard">
+                        <div class="col displayCard">
                             <h4>Wind Speed</h4>
                             <p class="wind displayNumber"></p>
                         </div>
-                        <div class="col weatherCard">
+                        <div class="col displayCard">
                             <h4>UV Index</h4>
                             <p class="UV displayNumber"></p>
                         </div>
                     </div>
                 </div>
-                <div class="container viewContainer">
+                <div class="container displayContainer">
                     <h2>5-day Forecast</h2>
                     <div class="row">
-                        <div class="col weatherCard" data-card="0">
+                        <div class="col displayCard" data-card="0">
                             <h4 class="forecastDate"></h4>
                             
                         </div>
-                        <div class="col weatherCard" data-card="1">
+                        <div class="col displayCard" data-card="1">
                             <h4 class="forecastDate"></h4>
                         </div>
-                        <div class="col weatherCard" data-card="2">
+                        <div class="col displayCard" data-card="2">
                             <h4 class="forecastDate"></h4>
                         </div>
-                        <div class="col weatherCard" data-card="3">
+                        <div class="col displayCard" data-card="3">
                             <h4 class="forecastDate"></h4>
                             
                         </div>

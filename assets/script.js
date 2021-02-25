@@ -1,11 +1,7 @@
 const APIKEY = "485a33a929a1db2dc1031920b9f05a3a"
 const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKEY + "&q=" + citySearch + "&units=imperial";
 
-const cityList = [];
-
-
-
- info
+let cityList = [];
 //main page forecast information
 $("#currentDate").text("Today " + moment().format('ddd Do'));
 
@@ -17,10 +13,11 @@ for (let i = 0; i < 5; i++) {
     forecastCard.html(`<h4> ${moment().add(startForecast, 'days').format('ddd')} </h4>`)
 };
 
-    const searchedCity; 
+     
 
 // (bad code, bad code, Wat you gon' do) Wat you gon' do when city search is submitted (foo'?)
 $(document).ready(function () {
+    let searchedCity;
 
     $(`#city-search`).submit(function () {
         event.preventDefault();
