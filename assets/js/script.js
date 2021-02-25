@@ -1,5 +1,4 @@
 
-const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKEY + "&q=" + citySearch + "&units=imperial";
 
 let cityList = [];
 
@@ -36,47 +35,7 @@ function currentWeather(citySearch) {
     })
 }
 
-//function to grab the Latitude x Longitude of a location.
-function getIndex(citySearch) {
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        
-        const cityLon = response.coord.lon;
-        const cityLat = response.coord.lat;
-
-        var queryIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKEY + "&lat=" + cityLat + "&lon=" + cityLon;
-
-        $.ajax({
-            url: queryIndex,
-            method: "GET"
-        }).then(function (response) {
-
-            $('.UV').html(`${response.value}`);
-
-            if (response.value <= 2) {
-                $('.UV').css('background-color', '#8DC443');
-                $('.UV').css('color', 'white');
-            } else if (response.value > 2 && response.value <= 5) {
-                $('.UV').css('background-color', '#FDD835');
-                $('.UV').css('color', 'white');
-            } else if (response.value > 5 && response.value <= 7) {
-                $('.UV').css('background-color', '#FFB301');
-                $('.UV').css('color', 'white');
-            } else if (response.value > 7 && response.value <= 10) {
-                $('.UV').css('background-color', '#D1394A');
-                $('.UV').css('color', 'white');
-            } else if (response.value > 10) {
-                $('.UV').css('background-color', '#954F71');
-                $('.UV').css('color', 'white');
-            }
-
-        })
-    })
-
-}
 
 function getForecast(citySearch) {
     const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=" + APIKEY + "&q=" + citySearch + "&units=imperial";
