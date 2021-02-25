@@ -5,7 +5,7 @@ let cityList = [];
 if (localStorage.getItem('Cities') === null) {
 
     // new-default cityList
-    cityList = ["Atlanta", "Chicago", "Austin", "New York", "San Francisco", "Portland", "Seattle"]
+    cityList = ["Bellingham", "Portland", "Oakland", "Austin", "Atlanta", "New York"]
     //stringify them cities
     localStorage.setItem('Cities', JSON.stringify(cityList));
     //KOBE the strings

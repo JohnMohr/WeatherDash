@@ -10,7 +10,7 @@ const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIK
 
         $(".city").html(response.name);
 
-        $("#currentDate").text(moment(response.dt).format('ddd Do'));
+        $(".currentDate").text(moment(response.dt).format('ddd Do'));
 
         const temp = Math.round(response.main.temp);
         $(".temp").html(`${temp}`);

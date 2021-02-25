@@ -1,12 +1,12 @@
 //main page forecast information
-$("#currentDate").text("Today " + moment().format('ddd'));
+$("#currentDate").text("Today " + moment().format('ddd Do'));
 
 for (let i = 0; i < 5; i++) {
 
     const startForecast = i + 1;
     const forecastCard = $(`div[data-card|="${i}"]`);
 
-    forecastCard.html(`<h4> ${moment().add(startForecast, 'days').format('ddd')} </h4>`)
+    forecastCard.html(`<h4> ${moment().add(startForecast, 'days').format('ddd Do')} </h4>`)
 };
 
 const APIKEY = "485a33a929a1db2dc1031920b9f05a3a"

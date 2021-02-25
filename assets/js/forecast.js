@@ -20,7 +20,7 @@ function getForecast(citySearch) {
             // Where <div data-card="index">
             var forecastCard = $(`div[data-card|="${i}"]`);
 
-            var forecastDay = moment(response.list[forecastStart].dt_txt).format('ddd');
+            var forecastDay = moment(response.list[forecastStart].dt_txt).format('ddd Do');
 
             var forecastTemp = Math.round(response.list[forecastStart].main.temp);
 
@@ -29,7 +29,7 @@ function getForecast(citySearch) {
             // Get icons for current weather
             var forecastIcon = response.list[forecastStart].weather[0].icon;
 
-            // https://openweathermap.org/img/wn/10d@2x.png
+           
             var iconURL = "https://openweathermap.org/img/wn/" + forecastIcon + ".png";
 
             var forecastDescription = response.list[forecastStart].weather[0].description;
