@@ -1,7 +1,7 @@
 //function to GET the current weather
 function currentWeather(citySearch) {
 
-const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKEY + "&q=" + citySearch;
+const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIKEY + "&q=" + citySearch + "&units=imperial";
 
     $.ajax({
         url: queryURL,
@@ -9,7 +9,8 @@ const queryURL = "https://api.openweathermap.org/data/2.5/weather?appid=" + APIK
     }).then(function (response) {
 
         $(".city").html(response.name);
-        $("#currentDate").text(moment(responst.dt).format('ddd'));
+
+        $("#currentDate").text(moment(response.dt).format('ddd Do'));
 
         const temp = Math.round(response.main.temp);
         $(".temp").html(`${temp}`);
